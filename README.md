@@ -1,4 +1,3 @@
-# FullStaockProject
 ## 学习Nuxt和Egg的练手项目
 
 ### 暂时已完成的功能
