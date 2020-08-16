@@ -14,5 +14,8 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'arrow-parens': 0,
+    'dot-notation': 0
+  }
 }

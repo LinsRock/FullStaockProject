@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        Hello Nuxt
+        Hello Nuxt World
       </h1>
       <div class="links">
         <a

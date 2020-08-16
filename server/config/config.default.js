@@ -1,7 +1,5 @@
 /* eslint valid-jsdoc: "off" */
 
-'use strict'
-
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -26,5 +24,19 @@ module.exports = appInfo => {
   return {
     ...config,
     ...userConfig,
+    security: {
+      csrf: {
+        enable: false,
+      },
+    },
+    mongoose: {
+      client: {
+        url: 'mongodb://127.0.0.1:27017/h-hub',
+        options: {},
+      },
+    },
+    jwt: {
+      secret: '@heresy!hub666',
+    },
   }
 }
