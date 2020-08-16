@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" class="form" label-width="60px" :model="form" :rules="rules">
+    <el-form ref="loginForm" class="form" label-width="40px" :model="form" :rules="rules">
       <h3 class="title">
         Login In
       </h3>
@@ -28,7 +28,7 @@
         <span slot="label" class="label-icon">
           <i class="el-icon-key" />
         </span>
-        <el-input v-model="form.emailCode" placeholder="请输入验证码" />
+        <el-input v-model="form.emailCode" placeholder="请输入邮箱验证码" />
         <el-button type="primary" :disabled="send.timer>0" @click="sendEmailCode">
           {{ sendText }}
         </el-button>

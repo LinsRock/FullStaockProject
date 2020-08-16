@@ -13,6 +13,7 @@ const transporter = nodemailer.createTransport({
 })
 
 class ToolService extends Service {
+  // 发送邮件
   async sendMail(email, subject, text, html) {
     const mailOptions = {
       from: userEmail,

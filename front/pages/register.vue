@@ -36,11 +36,11 @@ export default {
   data () {
     return {
       form: {
-        email: '731014288@qq.com',
-        nickName: 'Heresy',
+        email: '',
+        nickName: '',
         captcha: '',
-        passwd: '123456',
-        repasswd: '123456'
+        passwd: '',
+        repasswd: ''
       },
       rules: {
         email: [
@@ -92,7 +92,7 @@ export default {
             passwd: md5(passwd)
           }
 
-          // @todo 发送注册请求
+          // 发送注册请求
           const { code, message } = await this.$http.post('/user/register', params)
           if (code === 0) {
             this.$alert('注册成功', '成功', {

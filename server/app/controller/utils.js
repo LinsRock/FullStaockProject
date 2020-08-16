@@ -6,12 +6,12 @@ class UtilController extends BaseController {
     const { ctx } = this
     // 生成验证码svg
     const captcha = svgCaptcha.create({
-      size: 5,
+      size: 4,
       fontSize: 40,
-      background: '#f1f1f1',
+      background: '#8f8b85',
       width: 120,
       height: 40,
-      noise: 6,
+      noise: 4,
     })
 
     // 将验证码校验信息存放在session
@@ -21,6 +21,7 @@ class UtilController extends BaseController {
     ctx.body = captcha.data
   }
 
+  // 发送邮件验证码
   async sendcode() {
     const { ctx, service } = this
     const { email } = ctx.query
